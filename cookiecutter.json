@@ -1,7 +1,10 @@
 {
+    "_extensions": [
+        "cookiecutter.extensions.SlugifyExtension"
+    ],
     "project_name": "Maya Poetry Project",
-    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-    "package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_slug": "{{ cookiecutter.project_name | slugify() }}",
+    "package_name": "{{ cookiecutter.project_slug | replace('-', '_') }}",
     "description": "A Maya tool using Poetry.",
     "author": "Your Name",
     "email": "you@yourdomain.com"

@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "{{cookiecutter.project_slug}}"
+name = "{{ cookiecutter.project_slug }}"
 version = "0.1.0"
-description = "{{cookiecutter.description}}"
-authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
+description = "{{ cookiecutter.description }}"
+authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
 license = "MIT"
 packages = [
-    { include = "{{cookiecutter.package_name}}", from = "scripts" },
+    { include = "{{ cookiecutter.package_name }}", from = "scripts" },
 ]
 
 [tool.poetry.dependencies]
