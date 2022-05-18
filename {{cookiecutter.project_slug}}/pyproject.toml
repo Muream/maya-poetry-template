@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "{{cookiecutter.project_slug}}"
+version = "0.1.0"
+description = "{{cookiecutter.description}}"
+authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
+license = "MIT"
+packages = [
+    { include = "{{cookiecutter.package_name}}", from = "scripts" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+cmdx = "*"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+pylint = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
