@@ -1,19 +1,33 @@
 {
+    // =================================== Python =====================================
+    // --------------------------------- Intellisense ---------------------------------
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python",
     "python.languageServer": "Pylance",
-    "editor.formatOnSave": true,
+    "python.analysis.extraPaths": [
+        "scripts"
+    ],
+    // --------------------------------- Formatting -----------------------------------
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
     "python.formatting.provider": "black",
     "python.sortImports.args": [
         "--profile",
         "black"
     ],
-    "[python]": {
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        }
-    },
+    // ----------------------------------- Linting ------------------------------------
     "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-    "python.analysis.extraPaths": [
-        "scripts"
-    ]
+    "python.linting.prospectorEnabled": true,
+    // ----------------------------------- Testing ------------------------------------
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.pytestPath": "${workspaceFolder}/pytest.bat",
+    // --------------------------------- Docstrings -----------------------------------
+    "autoDocstring.docstringFormat": "google-notypes",
 }
